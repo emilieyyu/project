@@ -1,0 +1,14 @@
+<h1><%= @textbook.name %></h1>
+
+<h2>Description:</h2>
+<p><%=  @textbook.description %></p>
+
+<div>
+    <p class = "textbook-actions">
+        <%= link_to "Back", textbooks_path, class: "btn btn-default"%>
+        <%= link_to "Edit", edit_textbook_path(@textbook), class: "btn btn-default" %>
+        <%= link_to "Delete", textbook_path(@textbook), data: {
+            confirm: "Are you sure you want to delete: #{@textbook.name}?",
+            }, method: :delete %></li>
+    </p>
+</div>

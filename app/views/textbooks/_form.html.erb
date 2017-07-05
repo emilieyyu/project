@@ -1,0 +1,26 @@
+<% if @errors.present? %>
+    <div class="alert alert-danger errors">
+        <ul>
+            <% @errors.each do |error| %>
+            <li><%= error %></li>
+            <% end %>
+        </ul>
+    </div>
+<% end %>
+
+<%= form_for @textbook do |form| %>
+    <div class = "form-group">
+        <%= form.label:name %>
+        <%= form.text_field :name, class:"form-control" %>
+    </div>
+    <div class = "form-group">
+        <%= form.label:description %>
+        <%= form.text_area :description, class: "form-control" %>
+    </div>
+    <div class = "actions">
+        <%= form.submit class: "btn btn-primary" %>
+    </div>
+    
+<% end %>
+
+    
