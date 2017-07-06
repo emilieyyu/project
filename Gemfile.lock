@@ -129,6 +129,7 @@ GEM
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
     normalize-rails (4.1.1)
+    pg (0.21.0)
     puma (3.9.1)
     rack (2.0.3)
     rack-test (0.6.3)
@@ -214,6 +215,7 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.0.5)
   minitest-rails
+  pg
   puma (~> 3.0)
   rails (~> 5.0.4)
   sass-rails (~> 5.0)
