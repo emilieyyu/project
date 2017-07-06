@@ -1,4 +1,8 @@
 class SellController < ApplicationController
-  def sell
-  end
+    before_action:require_login
+    
+    def sell
+        @textbooks = Textbook.all
+    end
 end
+  

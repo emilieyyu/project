@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :textbook do
     name "Textbook Title"
-    description " Price $50, in Excellent Quality"
+    description "$50, Textbook is in Excellent Quality"
     association(:user)
   end
 end
