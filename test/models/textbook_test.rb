@@ -20,6 +20,18 @@ describe Textbook do
             textbook.errors[:name].must_include "can't be blank"
         end
         
+        it "requires a price" do
+            textbook.errors[:price].must_include "can't be blank"
+        end
+        
+        it "requires a course" do
+            textbook.errors[:course].must_include "can't be blank"
+        end
+        
+        it "requires an instructor" do
+            textbook.errors[:instructor].must_include "can't be blank"
+        end
+        
         it "requires the name to be unique for the same user" do
             existing_textbook = create (:textbook)
             textbook.name = existing_textbook.name

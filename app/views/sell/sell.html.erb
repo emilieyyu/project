@@ -5,7 +5,8 @@
     <div class="textbook">
         <div class="thumbnail">
             <div class="caption">
-                <h3><%= textbook.name%></h3>
+                <h3><%= textbook.name%><%= "  $" %><%= textbook.price %></h3>
+                <p><%= textbook.course%><%= "  " %><%= textbook.instructor %></p>
                 <p><%= textbook.description %></p>
                 <p align="right">
                   <button>Comment</button>

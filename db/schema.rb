@@ -14,6 +14,9 @@ ActiveRecord::Schema.define(version: 20170704180344) do
 
   create_table "textbooks", force: :cascade do |t|
     t.string   "name",        null: false
+    t.string   "price",       null: false
+    t.string   "course",      null: false
+    t.string   "instructor",  null: false
     t.text     "description", null: false
     t.integer  "user_id",     null: false
     t.datetime "created_at",  null: false
