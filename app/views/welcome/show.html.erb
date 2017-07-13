@@ -1,13 +1,37 @@
-
-<head>
-  <meta charset="UTF-8">
-  <title>SFU Book Club</title>
-  <%= stylesheet_link_tag "welcome.scss" %>
-  <div style="text-align:center;padding:50px;">
-   <h1>Welcome to SFU Book Club</h1>
-  </div>
-</head>
-
+<html>
+<title>SFU Book Club</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'welcome.scss' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
+
+<h2 style= "text-align:center">Welcome to SFU Book Club</h2>
+
+<div class="content">
+    <div class= "center">
+      <img class="mySlides" src="/assets/background/night.jpg" style="width:100%">
+      <img class="mySlides" src="/assets/background/library.jpg" style="width:100%">
+      <img class="mySlides" src="/assets/background/building.jpg" style="width:100%">
+      <img class="mySlides" src="/assets/background/day.jpg" style="width:100%">
+</div>
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000);
+}
+</script>
+
 </body>
 </html>

@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   resources :textbooks
   get "about" => "about#about"
   get "sell" => "sell#sell"
+
 end

@@ -1,0 +1,16 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.content{
+    max-width:980px;
+    margin:auto
+}
+
+.display-container{
+    position:relative;
+}
+
+.center{
+    margin : 0 auto;
+    display: block;
+}
