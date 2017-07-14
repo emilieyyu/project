@@ -2,7 +2,9 @@ class CommentsController < ApplicationController
     
     before_filter :require_login
     
-
+    def new
+        @comment = textbooks.comments.build
+    end
 
     def create
         @textbook = current_user.textbooks.find(params[:textbook_id])
