@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :textbooks
     resources :users
+    resources :comment
 
     root to: "textbooks#index"
   end
