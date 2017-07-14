@@ -1,5 +1,7 @@
 class Textbook < ApplicationRecord
+    has_many:comments, dependent: :destroy
     belongs_to:user
+
     
     validates :user, presence:true
     validates :name, presence:true, uniqueness: { scope: :user_id }

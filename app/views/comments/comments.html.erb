@@ -1,0 +1,7 @@
+<%= comment.commenters %>
+<%= comment.body %>
+<%= time_ago_in_words(comments.created_at) %>
+
+<% render :partial => "comment/form", :locals => {:comment => @comment} %>
+<p> <%= link_to 'Delete', [comment.textbook,comment], method :delete data: {confirm: 'Are u sure'} %> </p>
+   

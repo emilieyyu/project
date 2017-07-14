@@ -10,9 +10,11 @@
                 <h3><%= textbook.name%><%= "  $" %><%= textbook.price %></h3>
                 <p><%= textbook.course%><%= "  " %><%= textbook.instructor %></p>
                 <p><%= textbook.description %></p>
-                <p align="right">
-                  <button><a href="/comment.html">Comment</a></button>
-                </p>
+                  <h2><%= textbook.comments.count %>Comments</h2>
+                  <%= render textbook.comments %>
+                  <h3> Add a comments: </h3>
+                  <%= render 'comments/form' %>
+
             </div>
         </div>
     </div>
