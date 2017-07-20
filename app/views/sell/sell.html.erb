@@ -10,7 +10,7 @@
                 <h3><%= 'Book name:'%><%= link_to textbook.name, textbook_path(textbook)%><%= "  " %><%= "Price:" %><%= "  $" %><%= textbook.price %></h3>
                 <p><%= "Course:" %><%= textbook.course%><%= "  " %><%= "Instructor:" %><%= textbook.instructor %></p>
                 <p><%= "Description:" %><%= textbook.description %></p>
-                  <h2><%= textbook.comments.count %>Comments</h2>
+                  <h2>There are <%= textbook.comments.count %> Comments</h2>
                   <%= render textbook.comments %>
                   <h3> Add comments: </h3>
                   <%= render 'comments/form' %>
