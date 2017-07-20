@@ -44,7 +44,6 @@ group :development, :test do
   gem 'minitest-rails'
   gem 'factory_girl_rails'
   gem 'sqlite3'
-  gem 'dotenv-rails'
 end
 
 group :development do
