@@ -1,7 +1,6 @@
-<% @textbooks.each do|textbook| %>
 
 
-<%= form_for ([textbook,textbook.comments.build]) do |f| %>
+<%= form_for ([@textbook,@textbook.comments.build]) do |f| %>
     
  
     <p>
@@ -18,6 +17,5 @@
         <%= f.submit %>
     </p>
 
-<% end %>
 <% end %>
 

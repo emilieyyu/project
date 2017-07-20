@@ -1,15 +1,15 @@
-<p>
+<p class = comment_commente>
     <strong>Commenter:</strong>
     <%= comment.commenters %>
 </p>
 
-<p>
+<p class = comment_body>
     <strong>Comment:</strong>
     <%= comment.body %>
 </p>
 
-<p>
-    <%= time_ago_in_words(comment.created_at) %> ago
+<p class = comment_time>
+    <%= time_ago_in_words(comment.created_at) %>
 </p>
 
 <p> 
