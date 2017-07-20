@@ -6,7 +6,7 @@ class TextbooksController < ApplicationController
     end
     
     def show
-        @textbook = current_user.textbooks.find(params[:id])
+        @textbook = Textbook.find(params[:id])
     end
     
     def new

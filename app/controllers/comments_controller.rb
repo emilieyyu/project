@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     end
 
     def create
-        @textbook = current_user.textbooks.find(params[:textbook_id])
+        @textbook = Textbook.find(params[:textbook_id])
         @comment = @textbook.comments.create(comment_params)
         redirect_to textbook_path(@textbook)
     end
