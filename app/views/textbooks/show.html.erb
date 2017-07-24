@@ -1,25 +1,47 @@
+<head>
+    <style>
+        .comments{
+            width:50%;
+            float:left;
+        }
+        
+        .add_comment{
+            width:50%;
+            float:left;
+        }
+    </style>
+</head>
+
 <div class ="textbooks">   
-    <h1>Textbooks:</h1>
-    <p><%= @textbook.name %></p></br>
-    
-    <h2>Course:</h2>
-    <p><%=  @textbook.course %></p></br>
-    
-    <h2>Instructor:</h2>
-    <p><%=  @textbook.instructor %></p></br>
-    
-    <h2>Price:</h2>
-    <p><%=  @textbook.price %></p></br>
-    
-    <h2>Description:</h2>
-    <p><%=  @textbook.description %></p></br></br>
-    
-    <div>
-        <p class = "comments">
-            <h3>There are <%= @textbook.comments.count %> Comments</h3>
-                <%= render @textbook.comments %></br>
+    <div id = div_textbook>
+        <h3>Textbooks:</h3>
+        <p style= "font-family: Georgia;color:#97454a; font-size:20px"><%= @textbook.name %></p>
+        
+        <h3>Course:</h3>
+        <p style= "font-family: Georgia;color:#97454a; font-size:20px"><%=  @textbook.course %></p>
+        
+        <h3>Instructor:</h3>
+        <p style= "font-family: Georgia;color:#97454a; font-size:20px"><%=  @textbook.instructor %></p>
+        
+        <h3>Price:</h3>
+        <p style= "font-family: Georgia;color:#97454a; font-size:20px"><%=  @textbook.price %></p>
+        
+        <h3>Description:</h3>
+        <p style= "font-family: Georgia;color:#97454a; font-size:20px"><%=  @textbook.description %></p>
+        
+        <div>
+            <HR styple="FILTER: progid:DXImageTransform.Mocrosoft.Shadow(color:#97454a, diction:145,strength:45)" width="100%" color="#97454a" SIZE=1>
+        </div>
+        
+        <div class="comments">
+                <h3>There are <span style= "color:#97454a; font-family:Helvetica"><%= @textbook.comments.count %> </span> Comments</h3>
+                    <%= render @textbook.comments %></br>
+        </div>
+        
+        <div class="add_comment" >
             <h3> Add comments: </h3>
                 <%= render 'comments/form' %>
-        </p>
+        </div>
+        
     </div>
 </div>

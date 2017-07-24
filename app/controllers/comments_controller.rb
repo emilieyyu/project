@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
     end
   
     def destroy
-        @textbook = current_user.textbooks.find(params[:textbook_id])
+        @textbook = Textbook.find(params[:textbook_id])
         @comment = @textbook.comments.find(params[:id])
         @comment.destroy
         redirect_to textbook_path(@textbook)
