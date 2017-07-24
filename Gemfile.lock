@@ -73,10 +73,6 @@ GEM
     concurrent-ruby (1.0.5)
     datetime_picker_rails (0.0.7)
       momentjs-rails (>= 2.8.1)
-    dotenv (2.2.1)
-    dotenv-rails (2.2.1)
-      dotenv (= 2.2.1)
-      railties (>= 3.2, < 5.2)
     email_validator (1.6.0)
       activemodel
     erubis (2.7.0)
@@ -216,7 +212,6 @@ DEPENDENCIES
   byebug
   clearance (~> 1.15.1)
   coffee-rails (~> 4.2)
-  dotenv-rails
   factory_girl_rails
   jbuilder (~> 2.5)
   jquery-rails
