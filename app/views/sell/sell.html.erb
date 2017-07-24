@@ -8,9 +8,10 @@
         <div class="thumbnail">
             <div class="caption">
                 <h3><%= 'Book name:'%><%= link_to textbook.name, textbook_path(textbook)%><%= "  " %><%= "Price:" %><%= "  $" %><%= textbook.price %></h3>
-                <p><%= "Course:" %><%= textbook.course%><%= "  " %><%= "Instructor:" %><%= textbook.instructor %></p>
+                <p><%= "Course:" %><%= textbook.course%><%= "  " %></p>
+                <p><%= "Instructor:" %><%= textbook.instructor %></p>
                 <p><%= "Description:" %><%= textbook.description %></p>
-                  
+                <p> <%= time_ago_in_words(textbook.created_at) %> ago </p>
 
              
             </div>
