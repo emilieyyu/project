@@ -1,36 +1,60 @@
+<style>
+    
+@import "compass/css3";
+
+@-webkit-keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.background-image {
+  background: url('/../assets/background/book1.jpg') no-repeat center center fixed;
+  
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  
+  opacity: 0;
+  
+  -webkit-animation-name: fade-in;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 1s;
+}
+
+.background-image.visible {
+  opacity: 1;
+}
+    
+</style>
+
+<script>
+$(document).ready(function() {
+  $('.background-image').on('webkitAnimationEnd', function(e) {
+    $(this).addClass('visible');
+  });
+});
+    
+</script>
+
+
 <html>
 <title>SFU Book Club</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'welcome.scss' %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<body>
-
-<h2 style= "text-align:center">Welcome to SFU Book Club</h2>
-
-<div class="content">
-    <div class= "center">
-      <img class="mySlides" src="/../assets/background/computers.jpg" style="width:100%">
-      <img class="mySlides" src="/../assets/background/library.jpg" style="width:100%">
-      <img class="mySlides" src="/../assets/background/day.jpg" style="width:100%">
-</div>
-</div>
-
-<script>
-var myIndex = 0;
-carousel();
-
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 4000);
-}
-</script>
+<body class="background-image">
+    
 
 </body>
+
+
 </html>
