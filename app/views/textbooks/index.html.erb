@@ -70,7 +70,7 @@
                 <!--
                 <p>Description: <%= truncate(textbook.description, length: 150) %></p>
                 -->
-                <p id = "div_detail"> <%= time_ago_in_words(textbook.created_at) %> ago </p>
+                <p id="div_detail"> <%= time_ago_in_words(textbook.created_at) %> ago</p>
                 <p>
                     <%= link_to "Edit", edit_textbook_path(textbook), class: "btn btn-default" %>
                     <%= link_to "Delete", textbook_path(textbook), class: "btn btn-default",data: {
