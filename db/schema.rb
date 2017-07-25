@@ -13,9 +13,9 @@
 ActiveRecord::Schema.define(version: 20170714083401) do
 
   create_table "comments", force: :cascade do |t|
-    t.string   "commenters",  null: false
-    t.text     "body",        null: false
-    t.integer  "textbook_id", null: false
+    t.string   "commenters"
+    t.text     "body"
+    t.integer  "textbook_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["textbook_id"], name: "index_comments_on_textbook_id"
