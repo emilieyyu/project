@@ -15,6 +15,9 @@
     <h1>Textbooks for Sale</h1>
 </div>
 
+
+
+
 <div class="textbooks">
     <% @textbooks.each do|textbook| %>
     <div class="textbook">
@@ -23,7 +26,7 @@
                 <h3><%= 'Book name:'%><%= link_to textbook.name, textbook_path(textbook), id:"div_detail"%>&nbsp &nbsp &nbsp &nbsp<%= "Price:"%><%= "  $"%><%= textbook.price%></h3>
                 <p><%= "Course:" %><%= textbook.course%>&nbsp &nbsp &nbsp &nbsp<%= "Instructor:" %><%= textbook.instructor %></p>
                 <p><%= "Description:" %><%= textbook.description %></p>
-                <p class="data",> <%= textbook.created_at.strftime("%B %d, %Y") %> </p>
+                <p class="data"> <%= textbook.created_at.strftime("%B %d, %Y") %> </p>
 
              
             </div>
@@ -32,3 +35,18 @@
     </div>
 <% end %>
 </div>
+
+<p><%= "Can't find the right book? Search here: "%></p>
+
+<script>
+  (function() {
+    var cx = '004265675826218390244:f5zzskvjay8';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
