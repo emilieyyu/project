@@ -1,3 +1,12 @@
+<style>
+
+#div_textbook {
+    background-image: url("/../assets/background/background1.jpg");
+}
+    
+    
+</style>
+
 <div class="title-container">
     <h1>Textbooks for Sale</h1>
 </div>
@@ -5,7 +14,7 @@
 <div class="textbooks">
     <% @textbooks.each do|textbook| %>
     <div class="textbook">
-        <div class="thumbnail">
+        <div class="thumbnail" id="div_textbook">
             <div class="caption">
                 <h3><%= 'Book name:'%><%= link_to textbook.name, textbook_path(textbook)%>&nbsp &nbsp &nbsp &nbsp<%= "Price:" %><%= "  $" %><%= textbook.price %></h3>
                 <p><%= "Course:" %><%= textbook.course%>&nbsp &nbsp &nbsp &nbsp<%= "Instructor:" %><%= textbook.instructor %></p>
