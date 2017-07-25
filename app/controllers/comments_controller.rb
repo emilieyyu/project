@@ -8,17 +8,18 @@ class CommentsController < ApplicationController
         @comment = textbooks.comments.build
     end
 
+
     def create
         @textbook = Textbook.find(params[:textbook_id])
         @comment = @textbook.comments.create(comment_params)
-        redirect_to textbook_path(@textbook)
+        redirect_to textbook_path(@textbook),notice:"Comment Added"
     end
   
     def destroy
         @textbook = Textbook.find(params[:textbook_id])
         @comment = @textbook.comments.find(params[:id])
         @comment.destroy
-        redirect_to textbook_path(@textbook)
+        redirect_to textbook_path(@textbook),notice: "Deleted comment"
     end
 
     private
