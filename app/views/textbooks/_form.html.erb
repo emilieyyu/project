@@ -1,14 +1,16 @@
-<% if @errors.present? %>
+<%= form_for @textbook do |form| %>
+    
+    <% if @textbook.errors.any? %>
     <div class="alert alert-danger errors">
-        <ul>
-            <% @errors.each do |error| %>
-            <li><%= error %></li>
-            <% end %>
-        </ul>
+        <h3> <%= pluralize(@textbook.errors.count,"error") %> prevented this textbook from saving </h3>
+            <ul>
+                <% @textbook.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+                <% end %>
+            </ul>
     </div>
 <% end %>
-
-<%= form_for @textbook do |form| %>
+    
     <div class = "form-group">
         <%= form.label:name %>
         <%= form.text_field :name, class:"form-control" %>
