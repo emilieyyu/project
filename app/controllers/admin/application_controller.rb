@@ -8,7 +8,7 @@ module Admin
   class ApplicationController < Administrate::ApplicationController
     http_basic_authenticate_with name: "admin@admin.com", password: "admin"
     before_action :authenticate_admin
-
+    
     def authenticate_admin
     end
 
@@ -19,3 +19,5 @@ module Admin
     # end
   end
 end
+
+

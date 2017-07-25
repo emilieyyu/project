@@ -2,21 +2,24 @@ class CommentsController < ApplicationController
     
     before_filter :require_login
     
+
+    
     def new
         @comment = textbooks.comments.build
     end
 
+
     def create
         @textbook = Textbook.find(params[:textbook_id])
         @comment = @textbook.comments.create(comment_params)
-        redirect_to textbook_path(@textbook)
+        redirect_to textbook_path(@textbook),notice:"Comment Added"
     end
   
     def destroy
-        @textbook = current_user.textbooks.find(params[:textbook_id])
+        @textbook = Textbook.find(params[:textbook_id])
         @comment = @textbook.comments.find(params[:id])
         @comment.destroy
-        redirect_to textbook_path(@textbook)
+        redirect_to textbook_path(@textbook),notice: "Deleted comment"
     end
 
     private

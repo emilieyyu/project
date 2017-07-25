@@ -7,6 +7,7 @@ class TextbooksController < ApplicationController
     
     def show
         @textbook = Textbook.find(params[:id])
+        @textbooks = Textbook.all.order("created_at DESC")
     end
     
     def new

@@ -1,16 +1,15 @@
 
-
 <%= form_for ([@textbook,@textbook.comments.build]) do |f| %>
-    
- 
+
+
     <p>
         <%= f.label :commenters %><br>
-        <%= f.text_field :commenters %>
+        <%= f.text_field :commenters, :maxlength=>"20",autofocus: true, placeholder: "commenters", :required => 'required' %>
     </p>
-    
+  
     <p>
         <%= f.label :body %><br> 
-        <%= f.text_area :body %>
+        <%= f.text_area :body, :size =>"35x7",autofocus: true, placeholder: "body", :required => 'required' %>
     </p>    
     <br>
     <p>
@@ -18,4 +17,5 @@
     </p>
 
 <% end %>
+
 
