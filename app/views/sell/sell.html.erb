@@ -10,7 +10,7 @@
                 <h3><%= 'Book name:'%><%= link_to textbook.name, textbook_path(textbook)%>&nbsp &nbsp &nbsp &nbsp<%= "Price:" %><%= "  $" %><%= textbook.price %></h3>
                 <p><%= "Course:" %><%= textbook.course%>&nbsp &nbsp &nbsp &nbsp<%= "Instructor:" %><%= textbook.instructor %></p>
                 <p><%= "Description:" %><%= textbook.description %></p>
-                <p class="data"> <%= textbook.created_at.strftime("%B, %d, %Y") %> </p>
+                <p class="data"> <%= textbook.created_at.strftime("%B %d, %Y") %> </p>
 
              
             </div>
