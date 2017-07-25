@@ -11,7 +11,7 @@
                 <p><%= "Course:" %><%= textbook.course%><%= "  " %></p>
                 <p><%= "Instructor:" %><%= textbook.instructor %></p>
                 <p><%= "Description:" %><%= textbook.description %></p>
-                <p> <%= time_ago_in_words(textbook.created_at) %> ago </p>
+                <p class="data"> <%= textbook.created_at.strftime("%B, %d, %Y") %> </p>
 
              
             </div>
