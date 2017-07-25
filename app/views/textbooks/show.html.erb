@@ -3,11 +3,14 @@
         .comments{
             width:50%;
             float:left;
+            word-wrap:break-word; 
         }
         
+      
+         
         .add_comment{
-            width:50%;
-            float:left;
+            width:30%;
+            float:right;
         }
     </style>
 </head>
@@ -37,6 +40,8 @@
                 <h3>There are <span style= "color:#97454a; font-family:Helvetica"><%= @textbook.comments.count %> </span> Comments</h3>
                     <%= render @textbook.comments %></br>
         </div>
+        
+        <div class="space"> </div>
         
         <div class="add_comment" >
             <h3> Add comments: </h3>
