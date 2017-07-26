@@ -6,6 +6,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    font-family: 'Lato', sans-serif;
     
     h1{
         margin:0;
@@ -20,27 +21,34 @@
 	background-color:#7d171d;
     color:#ffffff;
   	border-radius:0;
+  	font-family: 'Lato', sans-serif;
 }
   
 .navbar-default .navbar-nav > li > a {
   	color:#fff;
+  	font-family: 'Lato', sans-serif;
 }
 
 .navbar-default .navbar-nav > .active > a {
     color: #ffffff;
 	background-color:transparent;
+	font-family: 'Lato', sans-serif;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     background-color: #990000;
     color: #FFF;
+    font-family: 'Lato', sans-serif;
 }
      
 .navbar-default .navbar-brand {
   	color:#eeeeee;
+  	font-family: 'Lato', sans-serif;
 }
 .navbar-default .navbar-toggle {
   	background-color:#eeeeee;
+  	font-family: 'Lato', sans-serif;
 }
 .navbar-default .icon-bar {
   	background-color:#97454a;
+  	font-family: 'Lato', sans-serif;
 }
