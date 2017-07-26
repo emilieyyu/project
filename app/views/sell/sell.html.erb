@@ -5,8 +5,13 @@
     border: 3px dashed #ddd;
 }
 
-#div_detail {
+#book_name {
     color: #7d171d;
+}
+
+#book_detail {
+    font-family: Georgia;
+    font-size: 16px;
 }
     
     
@@ -24,10 +29,10 @@
     <div class="textbook">
         <div class="thumbnail" id="div_textbook">
             <div class="caption">
-                <h3 style= "font-family: 'Lato', sans-serif;" ><%= 'Book name: '%><%= link_to textbook.name, textbook_path(textbook), id:"div_detail"%>&nbsp &nbsp &nbsp &nbsp<%= "Price:"%><%= "  $"%><%= textbook.price%></h3>
-                <p style="font-family: Georgia;"><%= "Course: " %><%= textbook.course%>&nbsp &nbsp &nbsp &nbsp<%= "Instructor: " %><%= textbook.instructor %></p>
-                <p style="font-family: Georgia;"><%= "Description: " %><%= textbook.description %></p>
-                <p style="font-family: Georgia;", class="data"><%= "Posted: " %> <%= textbook.created_at.strftime("%B %d, %Y") %> </p>
+                <h3 style= "font-family: 'Lato', sans-serif;" ><%= 'Book name: '%><%= link_to textbook.name, textbook_path(textbook), id:"book_name"%>&nbsp &nbsp &nbsp &nbsp<%= "Price:"%><%= "  $"%><%= textbook.price%></h3>
+                <p id="book_detail"><%= "Course: " %><%= textbook.course%>&nbsp &nbsp &nbsp &nbsp<%= "Instructor: " %><%= textbook.instructor %></p>
+                <p id="book_detail"><%= "Description: " %><%= textbook.description %></p>
+                <p id="book_detail" class="data"><%= "Posted: " %> <%= textbook.created_at.strftime("%B %d, %Y") %> </p>
 
              
             </div>
