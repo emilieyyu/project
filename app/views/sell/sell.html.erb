@@ -15,6 +15,15 @@
 }
     
     
+#div_search_button {
+    display: inline;
+    margin-left: 20px;
+}
+
+#div_search_text {
+    display: inline;
+}
+    
 </style>
 
 <div class="title-container">
@@ -42,10 +51,14 @@
 <% end %>
 </div>
 
-<p style="font-family: Georgia;font-size:18px"><%= "Can't find the right book? Search here: "%></p>
+
+<div>
+    <p id="div_search_text" style="font-family: Georgia;font-size:18px"><%= "Can't find the right book?"%></p> 
+    <INPUT TYPE="button" onClick="history.go(0)" VALUE="Search Here" id="div_search_button"> 
+</div>
 
 <script>
-  (function() {
+  (function run() {
     var cx = '004265675826218390244:f5zzskvjay8';
     var gcse = document.createElement('script');
     gcse.type = 'text/javascript';
@@ -56,5 +69,6 @@
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(gcse, s);
   })();
+  run();
 </script>
 <gcse:search></gcse:search>
