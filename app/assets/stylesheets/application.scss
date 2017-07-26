@@ -30,14 +30,9 @@
     color: #ffffff;
 	background-color:transparent;
 }
-      
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus,
-.navbar-default .navbar-nav > .open >a {
-    text-decoration: none;
-    background-color: #97454a;
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #990000;
+    color: #FFF;
 }
      
 .navbar-default .navbar-brand {
