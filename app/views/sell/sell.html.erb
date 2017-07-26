@@ -23,9 +23,9 @@
     <div class="textbook">
         <div class="thumbnail" id="div_textbook">
             <div class="caption">
-                <h3><%= 'Book name:'%><%= link_to textbook.name, textbook_path(textbook), id:"div_detail"%>&nbsp &nbsp &nbsp &nbsp<%= "Price:"%><%= "  $"%><%= textbook.price%></h3>
-                <p><%= "Course:" %><%= textbook.course%>&nbsp &nbsp &nbsp &nbsp<%= "Instructor:" %><%= textbook.instructor %></p>
-                <p><%= "Description:" %><%= textbook.description %></p>
+                <h3><%= 'Book name: '%><%= link_to textbook.name, textbook_path(textbook), id:"div_detail"%>&nbsp &nbsp &nbsp &nbsp<%= "Price:"%><%= "  $"%><%= textbook.price%></h3>
+                <p><%= "Course: " %><%= textbook.course%>&nbsp &nbsp &nbsp &nbsp<%= "Instructor: " %><%= textbook.instructor %></p>
+                <p><%= "Description: " %><%= textbook.description %></p>
                 <p class="data"> <%= textbook.created_at.strftime("%B %d, %Y") %> </p>
 
              
