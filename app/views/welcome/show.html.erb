@@ -42,17 +42,23 @@
   background-image: url("/../assets/background/book3.jpg");
   background-size: cover;
 }
+
+#header_font {
+  margin-top: 100px;
+  text-align: center;
+  color: white;
+}
 </style>
 
 
 <html>
-<title>SFU Book Club</title>
+
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'welcome.scss' %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
 <body id="body_background" class="fadeImage">
-  
+<h1 id="header_font">Welcome to SFU Book Club!</h1>
 </body>
 
 </html>

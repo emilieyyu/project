@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<style>
+
+#container_body {
+  text-align: left;
+}
+  
+</style>
+
+
 <html lang="en">
   <head>
     <title>SFU BookClub</title>
@@ -32,7 +41,7 @@
     </nav>
 </header>
 
-<section class="container">
+<section class="container", id="container_body">
     <div id="flash">
       <% flash.each do |key, value| %>
         <div class="flash alert <%= alert_class(key) %>"><%= value %></div>
