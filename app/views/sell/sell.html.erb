@@ -23,8 +23,9 @@
 #div_search_text {
     display: inline;
 }
-    
+
 </style>
+
 
 <div class="title-container">
     <h1 style= "font-family: 'Lato', sans-serif;">Textbooks for Sale</h1>
@@ -42,8 +43,6 @@
                 <p id="book_detail"><%= "Course: " %><%= textbook.course%>&nbsp &nbsp &nbsp &nbsp<%= "Instructor: " %><%= textbook.instructor %></p>
                 <p id="book_detail"><%= "Description: " %><%= textbook.description %></p>
                 <p id="book_detail" class="data"><%= "Posted: " %> <%= textbook.created_at.strftime("%B %d, %Y") %> </p>
-
-             
             </div>
             
         </div>
